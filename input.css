@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.terminal * {
+    @apply break-words
+}
+
+.prompt {
+    @apply font-bold flex flex-col w-full
+}
+
+.prompt-user {
+    @apply text-cyan-700
+}
+
+.prompt-host {
+    @apply text-green-700
+}
+
+.prompt-directory {
+    @apply text-blue-700
+}
+
+.prompt-return.true {
+    @apply text-green-700
+}
+
+.prompt-return.false {
+    @apply text-red-700
+}
+
+.prompt-input {
+    @apply flex
+}
+
+.prompt-input input {
+    @apply w-full outline-none bg-transparent
+}
+
+a {
+    @apply underline
+}
