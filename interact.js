@@ -172,6 +172,7 @@ SQL        : +++++-----`
                     output = document.createElement("div")
                     output.innerHTML = "Docker Qt Numpy Pandas Matplotlib Django .Net Core SQLite MySQL MSSQL MongoDB Postman Npm Tailwind CSS Bootstrap Framer Motion React Node.js Express JS Git Babel Webpack"
                     addNodeToShell(output)
+                    break
 
                 // File Required
                 case undefined:
