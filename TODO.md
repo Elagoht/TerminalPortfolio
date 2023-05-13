@@ -5,3 +5,4 @@ TODO
 - [ ] xdg-open command
 - [ ] startx command
 - [ ] echo command
+- [ ] Modulate project

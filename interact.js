@@ -156,15 +156,18 @@ tech_stack.md`
 
                 // Skill Set File
                 case "skill_set.md":
-                    addToShell(`Python     : ++++++++++
-C#         : ++++------
-JavaScript : +++++++---
-HTML       : +++++++++-
-CSS        : +++++++++-
-Bash       : ++++++++--
-Awk        : +++++++---
-SQL        : +++++-----`
-                    )
+                    output = document.createElement("pre")
+                    output.innerText = `| Language  | Experience |
+| --------- | ---------- |
+|Python     | ++++++++++ |
+|C#         | ++++------ |
+|JavaScript | +++++++--- |
+|HTML       | +++++++++- |
+|CSS        | +++++++++- |
+|Bash       | ++++++++-- |
+|Awk        | +++++++--- |
+|SQL        | +++++----- |`
+                    addNodeToShell(output)
                     break
 
                 // Tech Stack File

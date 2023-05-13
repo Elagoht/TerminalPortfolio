@@ -770,10 +770,6 @@ video {
   height: 100vh;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1974,8 +1970,16 @@ video {
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
-.leading-none {
-  line-height: 1;
+.leading-\[1\.1\] {
+  line-height: 1.1;
+}
+
+.leading-\[1\.2\] {
+  line-height: 1.2;
+}
+
+.leading-\[1\.15\] {
+  line-height: 1.15;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
