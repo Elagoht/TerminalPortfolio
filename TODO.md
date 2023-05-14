@@ -1,8 +1,9 @@
 TODO
 
-- [ ] Output DOM class
+- [X] Output DOM class
 - [ ] Return code handler
 - [ ] xdg-open command
 - [ ] startx command
-- [ ] echo command
-- [ ] Modulate project
+- [X] echo command
+- [X] Modulate project
+- [X] pwd command
