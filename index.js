@@ -33,6 +33,7 @@ function runCode(input) {
         case "cat": cmd_cat(input, PWD); break // Print file contents
         case "echo": cmd_echo(input, PWD); break // Echo Command
         case "pwd": cmd_pwd(input, PWD); break // Print Working Directory
+        case "neofetch": cmd_neofetch(input, PWD); break // Neofetch Clone
         case "clear": clearShell(); break // Clear Shell
         case "": addToShell("", PWD, false, ""); break // Empty prompt
         default: addToShell(
