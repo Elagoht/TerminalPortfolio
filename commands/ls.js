@@ -1,15 +1,15 @@
 import { addToShell } from "../utilities/output.js"
+import { filesystem } from "../environment/files.js"
 
 export default function cmd_ls(input, pwd) {
     let output
-    switch (pwd) {
-        case "~":
-            output = `about_me.md
-communication.md
-other_platforms.md
-skill_set.md
-tech_stack.md`
-            break
+    const directory = input.split(" ")[1] !== undefined
+        ? input.split(" ")[1]
+        : "~"
+    if (pwd.includes(directory)) {
+        output = filesystem[directory].join("\n")
+    } else {
+        output = `Directory '${directory}' not found`
     }
     addToShell(input, pwd, true, output)
 }

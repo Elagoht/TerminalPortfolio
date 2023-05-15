@@ -4,14 +4,14 @@ import cmd_echo from "./commands/echo.js"
 import cmd_pwd from "./commands/pwd.js"
 import cmd_help from "./commands/help.js"
 import cmd_cat from "./commands/cat.js"
+import clearShell from "./utilities/clear.js"
+import variables from "./environment/variables.js"
 
+const { PWD } = variables
 // Get Elements
 export const terminal = document.getElementById("terminal")
 export const prompt = document.getElementById("prompt")
 export const input = document.querySelector(".prompt-input input")
-
-// Create States
-let PWD = "~"
 
 // Handle Keyboard Keys
 window.onkeydown = (e) => {
@@ -22,18 +22,6 @@ window.onkeydown = (e) => {
             input.value = ""
         default:
             input.focus()
-    }
-}
-
-
-// Clear Shell
-function clearShell() {
-    while (true) {
-        if (terminal.childElementCount > 1) {
-            terminal.removeChild(terminal.firstChild)
-        } else {
-            break
-        }
     }
 }
 
