@@ -6,6 +6,7 @@ import cmd_help from "./commands/help.js"
 import cmd_cat from "./commands/cat.js"
 import clearShell from "./utilities/clear.js"
 import variables from "./environment/variables.js"
+import cmd_neofetch from "./commands/neofetch.js"
 
 const { PWD } = variables
 // Get Elements
@@ -18,8 +19,7 @@ window.onkeydown = (e) => {
     switch (e.keyCode) {
         case 13:
             runCode(input.value) // Do not break here
-            // Clear Prompt
-            input.value = ""
+            input.value = "" // Clear Prompt
         default:
             input.focus()
     }
@@ -27,38 +27,17 @@ window.onkeydown = (e) => {
 
 // Handle Prompted Commands
 function runCode(input) {
-    let output
     switch (input.split(" ")[0]) {
-        // Help Page
-        case "help":
-            cmd_help(input, PWD)
-            break
-        // List files
-        case "ls":
-            cmd_ls(input, PWD, output)
-            break
-        // Print file contents
-        case "cat":
-            cmd_cat(input, PWD)
-            break
-        // Echo Command
-        case "echo":
-            cmd_echo(input, PWD)
-            break
-        // Print Working Directory
-        case "pwd":
-            cmd_pwd(input, PWD)
-            break
-        // Clear Shell
-        case "clear":
-            clearShell()
-            break
-        // Empty prompt
-        case "":
-            addToShell("", PWD, false, "")
-            break
-        // Command Does Not Exist
-        default:
-            addToShell(input, PWD, false, `The command ${input.split(" ")[0]} not found. Try \`help\` to see list of commands.`)
+        case "help": cmd_help(input, PWD); break // Help Page
+        case "ls": cmd_ls(input, PWD); break // List files
+        case "cat": cmd_cat(input, PWD); break // Print file contents
+        case "echo": cmd_echo(input, PWD); break // Echo Command
+        case "pwd": cmd_pwd(input, PWD); break // Print Working Directory
+        case "clear": clearShell(); break // Clear Shell
+        case "": addToShell("", PWD, false, ""); break // Empty prompt
+        default: addToShell(
+            input, PWD, false,
+            `The command ${input.split(" ")[0]} not found. Try \`help\` to see list of commands.`
+        ) // Command Does Not Exist
     }
 }
