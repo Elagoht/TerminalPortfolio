@@ -522,6 +522,26 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .flex {
   display: flex;
 }
@@ -617,4 +637,23 @@ video {
 
 a {
   text-decoration-line: underline;
+}
+
+#scanline-container {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.125) 0%, rgba(255, 255, 255, 0.125) 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+  background-size: 100vh 6px;
+  pointer-events: none;
+  animation: scanlines 1s linear infinite;
+}
+
+@keyframes scanlines {
+  0% {
+    background-position: 0px 0px;
+    top: 0;
+  }
+
+  100% {
+    background-position: 6px 0px;
+    top: -6px;
+  }
 }
