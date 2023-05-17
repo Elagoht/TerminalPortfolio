@@ -42,7 +42,7 @@ a {
 }
 
 #blur {
-    @apply backdrop-blur-sm opacity-80;
+    @apply backdrop-blur-sm opacity-80 pointer-events-none;
 }
 
 #scanline {
@@ -53,7 +53,7 @@ a {
 }
 
 #crt {
-    @apply bg-no-repeat;
+    @apply bg-no-repeat pointer-events-none;
     background-image: url("crt.png");
     background-size: 100% 40px;
     animation: crt 5s linear infinite;

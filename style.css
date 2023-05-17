@@ -650,6 +650,7 @@ a {
 }
 
 #blur {
+  pointer-events: none;
   opacity: 0.8;
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -665,6 +666,7 @@ a {
 }
 
 #crt {
+  pointer-events: none;
   background-repeat: no-repeat;
   background-image: url("crt.png");
   background-size: 100% 40px;
