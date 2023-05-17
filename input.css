@@ -41,8 +41,12 @@ a {
     @apply underline
 }
 
+#blur {
+    @apply backdrop-blur-sm opacity-80;
+}
+
 #scanline {
-    @apply backdrop-blur-xl opacity-40 pointer-events-none;
+    @apply pointer-events-none opacity-30;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.125) 0%, rgba(255, 255, 255, 0.125) 50%, rgba(0, 0, 0, 0.125) 51%, rgba(0, 0, 0, 0.125) 100%);
     background-size: 100vh 6px;
     animation: scanlines 0.5s linear infinite;
