@@ -644,7 +644,7 @@ a {
   text-decoration-line: underline;
 }
 
-#scanline-container {
+#scanline {
   pointer-events: none;
   opacity: 0.4;
   --tw-backdrop-blur: blur(24px);
@@ -655,14 +655,29 @@ a {
   animation: scanlines 0.5s linear infinite;
 }
 
+#crt {
+  background-repeat: no-repeat;
+  background-image: url("crt.png");
+  background-size: 100% 40px;
+  animation: crt 5s linear infinite;
+}
+
 @keyframes scanlines {
   0% {
-    background-position: 0px 0px;
     top: 0;
   }
 
   100% {
-    background-position: 6px 0px;
     top: -6px;
+  }
+}
+
+@keyframes crt {
+  0% {
+    top: -40px;
+  }
+
+  100% {
+    top: 100%;
   }
 }
