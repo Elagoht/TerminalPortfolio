@@ -42,7 +42,7 @@ a {
 }
 
 #scanline-container {
-    @apply backdrop-blur-sm opacity-70;
+    @apply backdrop-blur-xl opacity-40;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.125) 0%, rgba(255, 255, 255, 0.125) 50%, rgba(0, 0, 0, 0.125) 51%, rgba(0, 0, 0, 0.125) 100%);
     background-size: 100vh 6px;
     animation: scanlines 0.5s linear infinite;
