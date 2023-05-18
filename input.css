@@ -42,24 +42,25 @@ a {
 }
 
 #blur {
-    @apply backdrop-blur-sm opacity-80 pointer-events-none;
+    @apply backdrop-blur-sm pointer-events-none;
+    animation: blur 5s ease infinite;
 }
 
 #scanline {
     @apply pointer-events-none opacity-30;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.125) 0%, rgba(255, 255, 255, 0.125) 50%, rgba(0, 0, 0, 0.125) 51%, rgba(0, 0, 0, 0.125) 100%);
     background-size: 100vh 6px;
-    animation: scanlines 0.5s linear infinite;
+    animation: scanline 0.5s linear infinite;
 }
 
 #crt {
     @apply bg-no-repeat pointer-events-none;
-    background-image: url("crt.png");
+    background-image: url("./assets/crt.png");
     background-size: 100% 40px;
-    animation: crt 5s linear infinite;
+    animation: crt 3s linear infinite;
 }
 
-@keyframes scanlines {
+@keyframes scanline {
     0% {
         top: 0;
     }
@@ -76,5 +77,19 @@ a {
 
     100% {
         top: 100%;
+    }
+}
+
+@keyframes blur {
+    0% {
+        @apply opacity-80
+    }
+
+    50% {
+        @apply opacity-40
+    }
+
+    100% {
+        @apply opacity-80
     }
 }

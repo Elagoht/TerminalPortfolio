@@ -651,10 +651,10 @@ a {
 
 #blur {
   pointer-events: none;
-  opacity: 0.8;
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  animation: blur 5s ease infinite;
 }
 
 #scanline {
@@ -662,18 +662,18 @@ a {
   opacity: 0.3;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.125) 0%, rgba(255, 255, 255, 0.125) 50%, rgba(0, 0, 0, 0.125) 51%, rgba(0, 0, 0, 0.125) 100%);
   background-size: 100vh 6px;
-  animation: scanlines 0.5s linear infinite;
+  animation: scanline 0.5s linear infinite;
 }
 
 #crt {
   pointer-events: none;
   background-repeat: no-repeat;
-  background-image: url("crt.png");
+  background-image: url("./assets/crt.png");
   background-size: 100% 40px;
-  animation: crt 5s linear infinite;
+  animation: crt 3s linear infinite;
 }
 
-@keyframes scanlines {
+@keyframes scanline {
   0% {
     top: 0;
   }
@@ -690,5 +690,19 @@ a {
 
   100% {
     top: 100%;
+  }
+}
+
+@keyframes blur {
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0.8;
   }
 }

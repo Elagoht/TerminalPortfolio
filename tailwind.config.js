@@ -2,7 +2,7 @@
 module.exports = {
   mode: 'all',
   preserveHtmlElements: false,
-  content: ["./**/*.{html,js}"],
+  content: ["./docs/*.{html,js}"],
   theme: {
     extend: {},
   },
