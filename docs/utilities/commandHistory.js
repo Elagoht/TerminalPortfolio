@@ -15,7 +15,7 @@ export const history = new History()
 export function histUp() {
     if (history.selection > 0)
         history.selection--
-    return history.bringCommand(history.selection)
+    return history.bringCommand(history.selection) ?? ""
 }
 export function histDown() {
     if (history.selection < history.length() - 1) {
