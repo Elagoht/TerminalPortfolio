@@ -12,7 +12,7 @@ export default function cmd_cat(input, pwd) {
 📚 I wrote a Linux book.
 🐧 I use Arch btw.
 👨‍🎤 I compose musics.
-🎸 I play bass guitarist.
+🎸 I play bass guitar.
 👨‍🏫 I am a teacher.`
             addToShell(input, pwd, true, output)
             break
